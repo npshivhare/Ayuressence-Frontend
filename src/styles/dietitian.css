@@ -1,0 +1,383 @@
+/* styles/dietitian.css */
+
+/* Patient Card Styles */
+.patient-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.patient-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.patient-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.patient-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient( #1f7a8c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.patient-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 4px 0;
+}
+
+.patient-info p {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.patient-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid var(--border-color);
+}
+
+.patient-stat {
+  text-align: center;
+}
+
+.patient-stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.patient-stat-label {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* Appointment Card Styles */
+.appointment-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.appointment-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.appointment-patient {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.appointment-date {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.appointment-notes {
+  font-size: 14px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.appointment-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 2px solid var(--border-color);
+}
+
+/* Diet Chart Generator Styles */
+.patient-details-box {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 20px 0;
+  border: 2px solid var(--primary-color);
+}
+
+.patient-details-box h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.diet-chart-info {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.diet-chart-info h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.diet-chart-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.diet-chart-info ul li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-light);
+}
+
+.diet-chart-info ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: 700;
+}
+
+/* Food Search & Results */
+.food-search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.food-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.food-item-card {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.food-item-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow);
+}
+
+.food-item-card h3 {
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.food-category {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.food-preview {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.food-preview p {
+  margin: 4px 0;
+}
+
+/* Food Detail Modal */
+.food-detail-modal {
+  max-width: 800px;
+  width: 95%;
+}
+
+.food-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.food-detail-header h2 {
+  font-size: 28px;
+  color: var(--text-dark);
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.quantity-input {
+  width: 120px;
+  padding: 8px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Nutrition Display */
+.nutrition-summary {
+  margin: 24px 0;
+}
+
+.nutrition-summary h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.nutrition-item {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.nutrition-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 4px;
+}
+
+.nutrition-label {
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nutrition-chart-container {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.nutrition-chart-container h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Ayurvedic Properties */
+.ayurvedic-properties {
+  margin: 24px 0;
+}
+
+.ayurvedic-properties h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.ayurvedic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ayurvedic-item {
+  background: var(--bg-light);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.ayurvedic-item-label {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .patient-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .appointment-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .food-search-form {
+    flex-direction: column;
+  }
+
+  .food-results {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ayurvedic-grid {
+    grid-template-columns: 1fr;
+  }
+}

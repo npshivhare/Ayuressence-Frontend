@@ -1,0 +1,390 @@
+/* styles/patient.css */
+
+/* Diet Chart View Styles */
+.day-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.day-btn {
+  padding: 12px 20px;
+  border: 2px solid var(--border-color);
+  background: var(--bg-white);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.day-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--bg-light);
+}
+
+.day-btn.active {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.meals-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.meal-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.meal-card-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: var(--bg-white);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meal-type-badge {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.meal-timing {
+  font-size: 14px;
+  opacity: 0.9;
+  color: white;
+}
+
+.meal-content {
+  padding: 20px;
+}
+
+.meal-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.meal-items {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 12px;
+  background: var(--bg-light);
+  border-radius: 8px;
+}
+
+/* Nutrition Section */
+.meal-nutrition {
+  margin: 20px 0;
+}
+
+.meal-nutrition h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.nutrition-grid-compact,
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+.nutrition-item-compact,
+.nutrition-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-light);
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.nutrition-value-compact,
+.nutrition-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nutrition-label-compact,
+.nutrition-label {
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Nutrition Bars */
+.nutrition-summary-box {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.nutrition-summary-box h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.nutrition-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nutrition-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nutrition-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nutrition-bar {
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.nutrition-bar-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 6px;
+}
+
+.nutrition-bar-fill.protein {
+  background: linear-gradient(90deg, #2d6a4f 0%, #40916c 100%);
+}
+
+.nutrition-bar-fill.carbs {
+  background: linear-gradient(90deg, #f4a261 0%, #e76f51 100%);
+}
+
+.nutrition-bar-fill.fats {
+  background: linear-gradient(90deg, #e63946 0%, #d62828 100%);
+}
+
+.nutrition-bar-fill.fiber {
+  background: linear-gradient(90deg, #52b788 0%, #40916c 100%);
+}
+
+/* Ayurvedic Properties */
+.ayurvedic-properties-compact,
+.ayurvedic-properties {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid var(--border-color);
+}
+
+.ayurvedic-properties-compact h4,
+.ayurvedic-properties h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.ayurvedic-grid-compact,
+.ayurvedic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ayurvedic-item-compact,
+.ayurvedic-item {
+  font-size: 13px;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.ayurvedic-item-label {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Dietitian Selection */
+.dietitian-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.dietitian-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.dietitian-card.selected {
+  border-color: var(--primary-color);
+  background: var(--bg-light);
+}
+
+.dietitian-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dietitian-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-white);
+  font-size: 24px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.dietitian-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 4px 0;
+}
+
+.dietitian-qualification {
+  font-size: 13px;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Quick Questions & Chatbot */
+.quick-questions {
+  padding: 20px 24px;
+  background: var(--bg-light);
+  border-top: 2px solid var(--border-color);
+}
+
+.quick-questions-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.quick-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.quick-question-btn {
+  background: var(--bg-white);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.quick-question-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--bg-light);
+}
+
+.typing-indicator {
+  display: flex;
+  gap: 6px;
+  padding: 12px;
+}
+
+.typing-indicator span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-light);
+  animation: typing 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.7; }
+  30% { transform: translateY(-10px); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .meals-container {
+    grid-template-columns: 1fr;
+  }
+
+  .day-selector {
+    justify-content: center;
+  }
+
+  .nutrition-grid-compact,
+  .nutrition-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ayurvedic-grid-compact,
+  .ayurvedic-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dietitian-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quick-questions-grid {
+    grid-template-columns: 1fr;
+  }
+}
